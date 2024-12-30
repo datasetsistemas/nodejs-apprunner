@@ -6,7 +6,7 @@ let count = 0
 setInterval(()=> {
   count++
   console.log(count + ': rodando...')
-}, 1000)
+}, 10000)
 
 const server = http.createServer((req, res)=> {
   console.log('Recebi request')
