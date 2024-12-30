@@ -1,4 +1,6 @@
-import https from 'https'
+import http from 'http'
+
+const PORT = process.env.PORT || 8080
 
 let count = 0
 setInterval(()=> {
@@ -6,11 +8,11 @@ setInterval(()=> {
   console.log(count + ': rodando...')
 }, 1000)
 
-const server = https.createServer((req, res)=> {
+const server = http.createServer((req, res)=> {
   console.log('Recebi request')
   res.end('server ok')
 })
 
-server.listen(3333, ()=> {
-  console.log('server running')
+server.listen(PORT, ()=> {
+  console.log('server running in port ' + PORT)
 })
