@@ -11,6 +11,6 @@ const server = http.createServer((req, res)=> {
   res.end('server ok')
 })
 
-server.listen(3333, ()=> {
+server.listen(8080, ()=> {
   console.log('server running')
 })
