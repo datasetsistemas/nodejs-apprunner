@@ -1,4 +1,4 @@
-import http from 'http'
+import https from 'https'
 
 let count = 0
 setInterval(()=> {
@@ -6,11 +6,11 @@ setInterval(()=> {
   console.log(count + ': rodando...')
 }, 1000)
 
-const server = http.createServer((req, res)=> {
+const server = https.createServer((req, res)=> {
   console.log('Recebi request')
   res.end('server ok')
 })
 
-server.listen(8080, ()=> {
+server.listen(3333, ()=> {
   console.log('server running')
 })
